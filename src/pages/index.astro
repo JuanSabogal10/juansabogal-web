@@ -11,7 +11,7 @@ import fr from '../i18n/fr.json';
       <a href="/" class="font-display text-lg font-bold tracking-tight">
         juan<span class="text-[#2563eb]">.</span>sabogal
       </a>
-      <nav class="flex items-center gap-6">
+      <nav class="hidden md:flex items-center gap-6">
         <a href="#about" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
           <span data-lang="es">{es.nav.about}</span>
           <span data-lang="fr">{fr.nav.about}</span>
@@ -28,14 +28,14 @@ import fr from '../i18n/fr.json';
           <span data-lang="es">{es.nav.contact}</span>
           <span data-lang="fr">{fr.nav.contact}</span>
         </a>
-        <button
-          id="lang-switch"
-          class="lang-switch text-xs font-medium px-2.5 py-1 rounded-full border border-[#e5e5e5] hover:border-[#1a1a1a] transition-colors"
-        >
-          <span data-lang="es">FR</span>
-          <span data-lang="fr">ES</span>
-        </button>
       </nav>
+      <button
+        id="lang-switch"
+        class="lang-switch text-xs font-medium px-2.5 py-1 rounded-full border border-[#e5e5e5] hover:border-[#1a1a1a] transition-colors"
+      >
+        <span data-lang="es">FR</span>
+        <span data-lang="fr">ES</span>
+      </button>
     </div>
   </header>
 
