@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = "Juan Sabogal — Construyo agentes de IA que resuelven problemas reales.",
+  description = "Juan Sabogal — Curiosidad, tecnología y construir cosas que importan.",
   image = "/profile.png",
   url = "https://juansabogal.com"
 } = Astro.props;
@@ -34,6 +34,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Juan Sabogal" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -45,6 +46,10 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
