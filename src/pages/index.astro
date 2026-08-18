@@ -42,14 +42,14 @@ import fr from '../i18n/fr.json';
   <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
     <!-- Hero -->
     <section class="py-20 reveal">
-      <div class="flex items-center gap-8">
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
         <img src="/profile.png" alt="Juan Sabogal" class="profile-photo" />
         <div>
-          <h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight">
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
             <span data-lang="es">{es.hero.greeting}</span>
             <span data-lang="fr">{fr.hero.greeting}</span>
           </h1>
-          <p class="mt-4 text-lg text-[#666] leading-relaxed max-w-xl">
+          <p class="mt-4 text-base md:text-lg text-[#666] leading-relaxed max-w-xl">
             <span data-lang="es">{es.hero.tagline}</span>
             <span data-lang="fr">{fr.hero.tagline}</span>
           </p>
@@ -262,7 +262,7 @@ import fr from '../i18n/fr.json';
         <span data-lang="fr">{fr.contact.description}</span>
       </p>
 
-      <div class="flex items-center gap-4 reveal">
+      <div class="flex flex-wrap items-center gap-3 reveal">
         <a href="mailto:juansabogalboho@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5e5e5] text-sm text-[#666] hover:border-[#1a1a1a] hover:text-[#1a1a1a] transition-colors">
           <span data-lang="es">{es.contact.email}</span>
           <span data-lang="fr">{fr.contact.email}</span>
