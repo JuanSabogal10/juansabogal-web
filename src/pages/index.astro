@@ -1,0 +1,347 @@
+---
+import Layout from '../layouts/Layout.astro';
+import es from '../i18n/es.json';
+import fr from '../i18n/fr.json';
+---
+
+<Layout title="Juan Sabogal">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fafafa]/80 backdrop-blur-md">
+    <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-display text-lg font-bold tracking-tight">
+        juan<span class="text-[#2563eb]">.</span>sabogal
+      </a>
+      <nav class="flex items-center gap-6">
+        <a href="#about" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
+          <span data-lang="es">{es.nav.about}</span>
+          <span data-lang="fr">{fr.nav.about}</span>
+        </a>
+        <a href="#projects" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
+          <span data-lang="es">{es.nav.projects}</span>
+          <span data-lang="fr">{fr.nav.projects}</span>
+        </a>
+        <a href="#writings" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
+          <span data-lang="es">{es.nav.writings}</span>
+          <span data-lang="fr">{fr.nav.writings}</span>
+        </a>
+        <a href="#contact" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
+          <span data-lang="es">{es.nav.contact}</span>
+          <span data-lang="fr">{fr.nav.contact}</span>
+        </a>
+        <button
+          id="lang-switch"
+          class="lang-switch text-xs font-medium px-2.5 py-1 rounded-full border border-[#e5e5e5] hover:border-[#1a1a1a] transition-colors"
+        >
+          <span data-lang="es">FR</span>
+          <span data-lang="fr">ES</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    <!-- Hero -->
+    <section class="py-20 reveal">
+      <div class="flex items-center gap-8">
+        <img src="/profile.png" alt="Juan Sabogal" class="profile-photo" />
+        <div>
+          <h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight">
+            <span data-lang="es">{es.hero.greeting}</span>
+            <span data-lang="fr">{fr.hero.greeting}</span>
+          </h1>
+          <p class="mt-4 text-lg text-[#666] leading-relaxed max-w-xl">
+            <span data-lang="es">{es.hero.tagline}</span>
+            <span data-lang="fr">{fr.hero.tagline}</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12">
+      <div class="section-divider mb-12 reveal"></div>
+      <h2 class="font-display text-2xl font-bold mb-8 reveal">
+        <span data-lang="es">{es.about.title}</span>
+        <span data-lang="fr">{fr.about.title}</span>
+      </h2>
+      <div class="space-y-5 text-[17px] leading-[1.8] text-[#444]">
+        <span data-lang="es">
+          {es.about.content.split('\n\n').map((p: string) => <p class="reveal">{p}</p>)}
+        </span>
+        <span data-lang="fr">
+          {fr.about.content.split('\n\n').map((p: string) => <p class="reveal">{p}</p>)}
+        </span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-12">
+      <div class="section-divider mb-12 reveal"></div>
+      <h2 class="font-display text-2xl font-bold mb-8 reveal">
+        <span data-lang="es">{es.projects.title}</span>
+        <span data-lang="fr">{fr.projects.title}</span>
+      </h2>
+
+      <div class="carousel reveal" id="projects-carousel">
+        <!-- Chatbot Director -->
+        <div class="carousel-item">
+          <div class="project-card border border-[#e5e5e5] rounded-2xl p-6 bg-white">
+            <h3 class="font-display text-lg font-bold mb-2">
+              <span data-lang="es">{es.projects['chatbot director'].name}</span>
+              <span data-lang="fr">{fr.projects['chatbot director'].name}</span>
+            </h3>
+            <p class="text-[#666] text-[15px] leading-relaxed mb-3">
+              <span data-lang="es">{es.projects['chatbot director'].what}</span>
+              <span data-lang="fr">{fr.projects['chatbot director'].what}</span>
+            </p>
+            <p class="text-sm text-[#999] leading-relaxed mb-4">
+              <span data-lang="es">{es.projects['chatbot director'].why}</span>
+              <span data-lang="fr">{fr.projects['chatbot director'].why}</span>
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">FastAPI</span>
+              <span class="tag-pill">Gemini</span>
+              <span class="tag-pill">Docker</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-[#f0f0f0]">
+              <span class="text-xs text-[#999]">
+                <span data-lang="es">En producción</span>
+                <span data-lang="fr">En production</span>
+              </span>
+              <a href="/projects/chatbot-director" class="text-xs font-medium text-[#2563eb] hover:underline">
+                <span data-lang="es">{es.projects['chatbot director'].demo} →</span>
+                <span data-lang="fr">{fr.projects['chatbot director'].demo} →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RAG Chatbot -->
+        <div class="carousel-item">
+          <div class="project-card border border-[#e5e5e5] rounded-2xl p-6 bg-white">
+            <h3 class="font-display text-lg font-bold mb-2">
+              <span data-lang="es">{es.projects.rag.name}</span>
+              <span data-lang="fr">{fr.projects.rag.name}</span>
+            </h3>
+            <p class="text-[#666] text-[15px] leading-relaxed mb-3">
+              <span data-lang="es">{es.projects.rag.what}</span>
+              <span data-lang="fr">{fr.projects.rag.what}</span>
+            </p>
+            <p class="text-sm text-[#999] leading-relaxed mb-4">
+              <span data-lang="es">{es.projects.rag.why}</span>
+              <span data-lang="fr">{fr.projects.rag.why}</span>
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tag-pill">LangChain</span>
+              <span class="tag-pill">Gemini</span>
+              <span class="tag-pill">Chroma</span>
+              <span class="tag-pill">Streamlit</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-[#f0f0f0]">
+              <span class="text-xs text-[#999]">
+                <span data-lang="es">Deployed</span>
+                <span data-lang="fr">Déployé</span>
+              </span>
+              <a href="/projects/rag-chatbot" class="text-xs font-medium text-[#2563eb] hover:underline">
+                <span data-lang="es">{es.projects.rag.demo} →</span>
+                <span data-lang="fr">{fr.projects.rag.demo} →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Finance -->
+        <div class="carousel-item">
+          <div class="project-card border border-[#e5e5e5] rounded-2xl p-6 bg-white">
+            <h3 class="font-display text-lg font-bold mb-2">
+              <span data-lang="es">{es.projects.finance.name}</span>
+              <span data-lang="fr">{fr.projects.finance.name}</span>
+            </h3>
+            <p class="text-[#666] text-[15px] leading-relaxed mb-3">
+              <span data-lang="es">{es.projects.finance.what}</span>
+              <span data-lang="fr">{fr.projects.finance.what}</span>
+            </p>
+            <p class="text-sm text-[#999] leading-relaxed mb-4">
+              <span data-lang="es">{es.projects.finance.why}</span>
+              <span data-lang="fr">{fr.projects.finance.why}</span>
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tag-pill">FastAPI</span>
+              <span class="tag-pill">Next.js</span>
+              <span class="tag-pill">Tailwind</span>
+              <span class="tag-pill">Railway</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-[#f0f0f0]">
+              <span class="text-xs text-[#999]">
+                <span data-lang="es">En desarrollo</span>
+                <span data-lang="fr">En développement</span>
+              </span>
+              <a href="/projects/personal-finance" class="text-xs font-medium text-[#2563eb] hover:underline">
+                <span data-lang="es">{es.projects.finance.demo} →</span>
+                <span data-lang="fr">{fr.projects.finance.demo} →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-2 mt-6">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+      </div>
+    </section>
+
+    <!-- Writings -->
+    <section id="writings" class="py-12">
+      <div class="section-divider mb-12 reveal"></div>
+      <h2 class="font-display text-2xl font-bold mb-2 reveal">
+        <span data-lang="es">{es.writings.title}</span>
+        <span data-lang="fr">{fr.writings.title}</span>
+      </h2>
+      <p class="text-sm text-[#999] mb-8 reveal">
+        <span data-lang="es">{es.writings.subtitle}</span>
+        <span data-lang="fr">{fr.writings.subtitle}</span>
+      </p>
+
+      <div class="space-y-3 reveal-stagger">
+        <a href="https://juansabogal.beehiiv.com/p/la-curiosidad-como-moat" target="_blank" rel="noopener noreferrer" class="writing-card block border border-[#e5e5e5] rounded-2xl p-5 bg-white reveal">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-display font-semibold text-[17px]">La curiosidad como MOAT</h3>
+              <p class="mt-1.5 text-sm text-[#666] leading-relaxed">
+                <span data-lang="es">La curiosidad se volvió ese MOAT que va a cambiar industrias enteras.</span>
+                <span data-lang="fr">La curiosité est devenue ce MOAT qui va changer des industries entières.</span>
+              </p>
+            </div>
+            <span class="text-xs text-[#999] whitespace-nowrap mt-1">May 30</span>
+          </div>
+        </a>
+
+        <a href="https://juansabogal.beehiiv.com/p/wuwei" target="_blank" rel="noopener noreferrer" class="writing-card block border border-[#e5e5e5] rounded-2xl p-5 bg-white reveal">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-display font-semibold text-[17px]">Wu Wei: El arte de hacer no haciendo</h3>
+              <p class="mt-1.5 text-sm text-[#666] leading-relaxed">
+                <span data-lang="es">La mejor forma de bailar es no haciéndolo. Una lección de hacer no haciendo.</span>
+                <span data-lang="fr">La meilleure façon de danser est de ne pas le faire. Une leçon de wu wei.</span>
+              </p>
+            </div>
+            <span class="text-xs text-[#999] whitespace-nowrap mt-1">Apr 6</span>
+          </div>
+        </a>
+
+        <a href="https://juansabogal.beehiiv.com/p/por-que-queremos-mas-tiempo" target="_blank" rel="noopener noreferrer" class="writing-card block border border-[#e5e5e5] rounded-2xl p-5 bg-white reveal">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-display font-semibold text-[17px]">¿Por qué queremos más tiempo?</h3>
+              <p class="mt-1.5 text-sm text-[#666] leading-relaxed">
+                <span data-lang="es">¿Por qué y para qué queremos más tiempo si al final lo usamos para lo mismo?</span>
+                <span data-lang="fr">Pourquoi voulons-nous plus de temps si au final on l'utilise pour la même chose ?</span>
+              </p>
+            </div>
+            <span class="text-xs text-[#999] whitespace-nowrap mt-1">Apr 6</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12">
+      <div class="section-divider mb-12 reveal"></div>
+      <h2 class="font-display text-2xl font-bold mb-4 reveal">
+        <span data-lang="es">{es.contact.title}</span>
+        <span data-lang="fr">{fr.contact.title}</span>
+      </h2>
+      <p class="text-sm text-[#999] mb-6 reveal">
+        <span data-lang="es">{es.contact.description}</span>
+        <span data-lang="fr">{fr.contact.description}</span>
+      </p>
+
+      <div class="flex items-center gap-4 reveal">
+        <a href="mailto:juansabogalboho@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5e5e5] text-sm text-[#666] hover:border-[#1a1a1a] hover:text-[#1a1a1a] transition-colors">
+          <span data-lang="es">{es.contact.email}</span>
+          <span data-lang="fr">{fr.contact.email}</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-sabogal-boh%C3%B3rquez/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5e5e5] text-sm text-[#666] hover:border-[#1a1a1a] hover:text-[#1a1a1a] transition-colors">
+          LinkedIn
+        </a>
+        <a href="https://github.com/JuanSabogal10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e5e5e5] text-sm text-[#666] hover:border-[#1a1a1a] hover:text-[#1a1a1a] transition-colors">
+          GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#e5e5e5]">
+    <div class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between text-xs text-[#999]">
+      <span>
+        <span data-lang="es">{es.footer.built}</span>
+        <span data-lang="fr">{fr.footer.built}</span>
+      </span>
+      <span>
+        <span data-lang="es">{es.footer.powered}</span>
+        <span data-lang="fr">{fr.footer.powered}</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Language switcher
+    const switchBtn = document.getElementById('lang-switch');
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyLang(lang: string) {
+      document.body.classList.toggle('lang-fr', lang === 'fr');
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+
+    applyLang(currentLang);
+
+    switchBtn?.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'fr' : 'es';
+      applyLang(currentLang);
+    });
+
+    // Carousel navigation
+    const carousel = document.getElementById('projects-carousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    carousel?.addEventListener('scroll', () => {
+      if (!carousel) return;
+      const scrollLeft = carousel.scrollLeft;
+      const cardWidth = carousel.querySelector('.carousel-item')?.clientWidth || 300;
+      const index = Math.round(scrollLeft / (cardWidth + 24));
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        if (!carousel) return;
+        const index = parseInt(dot.getAttribute('data-index') || '0');
+        const cardWidth = carousel.querySelector('.carousel-item')?.clientWidth || 300;
+        carousel.scrollTo({ left: index * (cardWidth + 24), behavior: 'smooth' });
+      });
+    });
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</Layout>

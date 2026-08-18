@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "writings": "Escritos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Soy Juan",
+    "tagline": "Construyo agentes de IA que resuelven problemas reales.",
+    "description": "Creo en la curiosidad como último MOAT. Escribo sobre tecnología, filosofía y las cosas que nos hacen humanos."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "content": "Soy Juan. Creo que la curiosidad es el último MOAT que nos queda.\n\nConstruyo agentes de IA que resuelven problemas reales — no porque sea lo que está de moda, sino porque me fascina la frontera entre lo que una máquina puede hacer y lo que un humano debería hacer.\n\nEscribo sobre tecnología, filosofía y las cosas que nos hacen humanos en un mundo cada vez menos humano.\n\nAcá vas a encontrar mis proyectos, mis reflexiones y lo que me pasa por la cabeza."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "chatbot director": {
+      "name": "Chatbot Director",
+      "what": "Un agente de IA para directores que transforma datos en decisiones directamente en WhatsApp.",
+      "why": "Los directores no pueden acceder a sus datos de forma simple. Están atrapados en dashboards complejos. WhatsApp es el canal preferido en LATAM.",
+      "stack": "Python · FastAPI · Gemini · MySQL · Redis · Docker",
+      "demo": "Ver demo"
+    },
+    "rag": {
+      "name": "RAG Chatbot",
+      "what": "Chatbot RAG que responde preguntas sobre una base de conocimiento usando LangChain y Gemini.",
+      "why": "Proyecto de entrevista técnica para AI Partners. Demuestra retrieval, generación y grounding — el chatbot dice 'no sé' cuando no tiene la respuesta.",
+      "stack": "Python · LangChain · Gemini · Chroma · Streamlit",
+      "demo": "Ver en GitHub"
+    },
+    "finance": {
+      "name": "Personal Finance",
+      "what": "App full-stack para gestionar finanzas personales con IA — sync bancario, analytics y asistente via Telegram.",
+      "why": "Necesitaba una herramienta propia para trackear gastos, presupuestos y metas financieras. Conecta directo con mi banco (Revolut) y tiene un asistente de IA que responde preguntas sobre mis finanzas.",
+      "stack": "Python · FastAPI · Next.js · Tailwind · Recharts · Railway",
+      "demo": "Ver presentación"
+    }
+  },
+  "writings": {
+    "title": "Escritos",
+    "subtitle": "Reflexiones sobre tecnología, filosofía y lo humano.",
+    "cta": "Leer"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Querés hablar? Me encontrás en estas plataformas.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "built": "Hecho con curiosidad.",
+    "powered": "Impulsado por Astro"
+  }
+}

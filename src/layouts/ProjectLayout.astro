@@ -1,0 +1,88 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  badge: string;
+  badgeColor: string;
+}
+
+const { title, description, badge, badgeColor } = Astro.props;
+---
+
+<Layout title={`${title} — Juan Sabogal`} description={description}>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fafafa]/80 backdrop-blur-md">
+    <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-display text-lg font-bold tracking-tight">
+        juan<span class="text-[#2563eb]">.</span>sabogal
+      </a>
+      <nav class="flex items-center gap-4">
+        <a href="/" class="text-sm text-[#666] hover:text-[#1a1a1a] transition-colors">
+          ← Volver
+        </a>
+        <button
+          id="lang-switch"
+          class="lang-switch text-xs font-medium px-2.5 py-1 rounded-full border border-[#e5e5e5] hover:border-[#1a1a1a] transition-colors"
+        >
+          <span data-lang="es">FR</span>
+          <span data-lang="fr">ES</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    <section class="py-16 reveal">
+      <div class={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-6`} style={`background: ${badgeColor}15; color: ${badgeColor};`}>
+        <span class="w-1.5 h-1.5 rounded-full" style={`background: ${badgeColor};`}></span>
+        {badge}
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight tracking-tight">{title}</h1>
+      <p class="mt-4 text-lg text-[#666] leading-relaxed max-w-xl">{description}</p>
+    </section>
+
+    <slot />
+  </main>
+
+  <footer class="border-t border-[#e5e5e5]">
+    <div class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between text-xs text-[#999]">
+      <span>Hecho con curiosidad.</span>
+      <a href="/" class="hover:text-[#1a1a1a] transition-colors">← Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script>
+    const switchBtn = document.getElementById('lang-switch');
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyLang(lang: string) {
+      document.body.classList.toggle('lang-fr', lang === 'fr');
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+
+    applyLang(currentLang);
+
+    switchBtn?.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'fr' : 'es';
+      applyLang(currentLang);
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</Layout>

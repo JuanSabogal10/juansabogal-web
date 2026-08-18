@@ -1,0 +1,143 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="RAG Chatbot"
+  description="Chatbot RAG que responde preguntas sobre una base de conocimiento usando LangChain y Gemini."
+  badge="Deployed"
+  badgeColor="#2563eb"
+>
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">El problema</span>
+      <span data-lang="fr">Le problème</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Entrevista técnica para AI Partners. El ejercicio: construir un chatbot RAG sobre una base de conocimiento ficticia de la empresa, deployado detrás de una interfaz web simple.</span>
+        <span data-lang="fr">Entretien technique pour AI Partners. L'exercice : construire un chatbot RAG sur une base de connaissances fictive de l'entreprise, déployé derrière une interface web simple.</span>
+      </p>
+      <p>
+        <span data-lang="es">El objetivo no era un sistema de producción, sino demostrar razonamiento sobre un problema real de Generative AI, trade-offs pragmáticos bajo presión de tiempo, y un sistema que funcione end-to-end.</span>
+        <span data-lang="fr">L'objectif n'était pas un système de production, mais de démontrer le raisonnement sur un vrai problème de Generative AI, des compromis pragmatiques sous pression de temps, et un système qui fonctionne de bout en bout.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Cómo funciona</span>
+      <span data-lang="fr">Comment ça marche</span>
+    </h2>
+    <div class="space-y-4">
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">01</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">Ingesta</h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Carga el documento de conocimiento, lo divide en chunks de ~500-1000 tokens con overlap.</span>
+            <span data-lang="fr">Charge le document de connaissances, le divise en chunks de ~500-1000 tokens avec chevauchement.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">02</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Embeddings + Indexación</span>
+            <span data-lang="fr">Embeddings + Indexation</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Embedding de chunks, almacenamiento en Chroma vector store.</span>
+            <span data-lang="fr">Embedding des chunks, stockage dans Chroma vector store.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">03</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">Retrieval</h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Búsqueda de similitud top-k sobre la pregunta del usuario.</span>
+            <span data-lang="fr">Recherche de similarité top-k sur la question de l'utilisateur.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">04</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Generación verificada</span>
+            <span data-lang="fr">Génération vérifiée</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Prompt con contexto recuperado + pregunta. Responder solo desde el contexto, admitir cuando no sabe.</span>
+            <span data-lang="fr">Prompt avec contexte récupéré + question. Répondre uniquement depuis le contexte, admettre quand il ne sait pas.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Stack técnico</span>
+      <span data-lang="fr">Stack technique</span>
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-pill">Python</span>
+      <span class="tag-pill">LangChain</span>
+      <span class="tag-pill">Gemini</span>
+      <span class="tag-pill">Chroma</span>
+      <span class="tag-pill">Streamlit</span>
+      <span class="tag-pill">Docker</span>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Decisiones clave</span>
+      <span data-lang="fr">Décisions clés</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <strong>Chroma sobre FAISS</strong> —
+        <span data-lang="es">más simple para un corpus pequeño, sin setup externo.</span>
+        <span data-lang="fr">plus simple pour un petit corpus, sans setup externe.</span>
+      </p>
+      <p>
+        <strong>Gemini sobre OpenAI</strong> —
+        <span data-lang="es">el ejercicio pedía GCP, y Gemini tiene un free tier generoso.</span>
+        <span data-lang="fr">l'exercice demandait GCP, et Gemini a un free tier généreux.</span>
+      </p>
+      <p>
+        <strong>Grounding estricto</strong> —
+        <span data-lang="es">el chatbot dice "no sé" cuando la pregunta no está en la base. Sin alucinaciones.</span>
+        <span data-lang="fr">le chatbot dit "je ne sais pas" quand la question n'est pas dans la base. Sans hallucinations.</span>
+      </p>
+      <p>
+        <strong>Streamlit</strong> —
+        <span data-lang="es">la forma más rápida de tener una UI funcional sin frontend custom.</span>
+        <span data-lang="fr">la façon la plus rapide d'avoir une UI fonctionnelle sans frontend custom.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <div class="flex items-center gap-4">
+      <a href="https://ai-partners-rag-chatbot-juan-sabogal.streamlit.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#333] transition-colors">
+        <span data-lang="es">Ver demo →</span>
+        <span data-lang="fr">Voir la démo →</span>
+      </a>
+      <a href="https://github.com/JuanSabogal10/ai-partners-rag-chatbot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] text-sm font-medium hover:border-[#1a1a1a] transition-colors">
+        GitHub
+      </a>
+    </div>
+  </section>
+</ProjectLayout>

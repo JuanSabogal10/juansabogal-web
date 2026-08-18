@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "writings": "Écrits",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Je suis Juan",
+    "tagline": "Je construis des agents IA qui résolvent des problèmes réels.",
+    "description": "Je crois en la curiosité comme dernier MOAT. J'écris sur la technologie, la philosophie et ce qui nous rend humains."
+  },
+  "about": {
+    "title": "À propos",
+    "content": "Je suis Juan. Je crois que la curiosité est le dernier MOAT qu'il nous reste.\n\nJe construis des agents IA qui résolvent des problèmes réels — pas parce que c'est à la mode, mais parce que la frontière entre ce qu'une machine peut faire et ce qu'un humain devrait faire me fascine.\n\nJ'écris sur la technologie, la philosophie et ce qui nous rend humains dans un monde de moins en moins humain.\n\nIci vous trouverez mes projets, mes réflexions et ce qui me passe par la tête."
+  },
+  "projects": {
+    "title": "Projets",
+    "chatbot director": {
+      "name": "Chatbot Director",
+      "what": "Un agent IA pour directeurs qui transforme les données en décisions directement dans WhatsApp.",
+      "why": "Les directeurs ne peuvent pas accéder à leurs données facilement. Ils sont piégés dans des dashboards complexes. WhatsApp est le canal préféré en LATAM.",
+      "stack": "Python · FastAPI · Gemini · MySQL · Redis · Docker",
+      "demo": "Voir la démo"
+    },
+    "rag": {
+      "name": "RAG Chatbot",
+      "what": "Chatbot RAG qui répond aux questions sur une base de connaissances en utilisant LangChain et Gemini.",
+      "why": "Projet d'entretien technique pour AI Partners. Démontre le retrieval, la génération et le grounding — le chatbot dit 'je ne sais pas' quand il n'a pas la réponse.",
+      "stack": "Python · LangChain · Gemini · Chroma · Streamlit",
+      "demo": "Voir sur GitHub"
+    },
+    "finance": {
+      "name": "Personal Finance",
+      "what": "App full-stack pour gérer les finances personnelles avec l'IA — sync bancaire, analytics et assistant via Telegram.",
+      "why": "J'avais besoin d'un outil pour suivre les dépenses, les budgets et les objectifs financiers. Connecté directement à ma banque (Revolut) avec un assistant IA qui répond aux questions sur mes finances.",
+      "stack": "Python · FastAPI · Next.js · Tailwind · Recharts · Railway",
+      "demo": "Voir la présentation"
+    }
+  },
+  "writings": {
+    "title": "Écrits",
+    "subtitle": "Réflexions sur la technologie, la philosophie et l'humain.",
+    "cta": "Lire"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Vous voulez discuter ? Me trouvez sur ces plateformes.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "built": "Fait avec curiosité.",
+    "powered": "Propulsé par Astro"
+  }
+}

@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --color-bg: #fafafa;
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+  --color-border: #e5e5e5;
+  --color-accent: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Language switcher */
+[data-lang="fr"] {
+  display: none;
+}
+
+body.lang-fr [data-lang="es"] {
+  display: none;
+}
+
+body.lang-fr [data-lang="fr"] {
+  display: block;
+}
+
+body.lang-fr .lang-fr-inline {
+  display: inline;
+}
+
+body.lang-fr .lang-es-inline {
+  display: none;
+}
+
+.lang-fr-inline {
+  display: none;
+}
+
+/* Smooth transitions */
+.lang-switch {
+  transition: opacity 0.2s ease;
+}
+
+.lang-switch:hover {
+  opacity: 0.7;
+}
+
+/* Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.reveal-stagger .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger .reveal:nth-child(2) { transition-delay: 100ms; }
+.reveal-stagger .reveal:nth-child(3) { transition-delay: 200ms; }
+.reveal-stagger .reveal:nth-child(4) { transition-delay: 300ms; }
+.reveal-stagger .reveal:nth-child(5) { transition-delay: 400ms; }
+.reveal-stagger .reveal:nth-child(6) { transition-delay: 500ms; }
+
+/* Project carousel */
+.carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 calc(100% - 1rem);
+  min-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
+/* Project card */
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Writing card */
+.writing-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.writing-card:hover {
+  transform: translateY(-2px);
+  border-color: #ccc;
+}
+
+/* Carousel navigation dots */
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d4d4d4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #1a1a1a;
+  width: 20px;
+  border-radius: 3px;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e5e5, transparent);
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f5f5f5;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tag-pill:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Profile photo */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e5e5e5;
+}

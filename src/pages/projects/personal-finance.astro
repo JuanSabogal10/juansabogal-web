@@ -1,0 +1,144 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="Personal Finance"
+  description="App full-stack para gestionar finanzas personales con IA — sync bancario, analytics y asistente via Telegram."
+  badge="En desarrollo"
+  badgeColor="#f59e0b"
+>
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">El problema</span>
+      <span data-lang="fr">Le problème</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Las apps de finanzas personales existentes son genéricas. No se adaptan a cómo yo gasto, no conectan con mi banco real, y no me dan insights personalizados.</span>
+        <span data-lang="fr">Les apps de finances personnelles existantes sont génériques. Elles ne s'adaptent pas à ma façon de dépenser, ne se connectent pas à ma vraie banque, et ne me donnent pas d'insights personnalisés.</span>
+      </p>
+      <p>
+        <span data-lang="es">Quería algo propio: una herramienta que se conecte directo con mis cuentas, categorice gastos automáticamente, y responda preguntas como "¿cuánto gasté en comida este mes?" sin tener que abrir un dashboard.</span>
+        <span data-lang="fr">Je voulais quelque chose de personnel : un outil qui se connecte directement à mes comptes, catégorise les dépenses automatiquement, et réponde à des questions comme "combien j'ai dépensé en nourriture ce mois-ci?" sans avoir à ouvrir un dashboard.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Cómo funciona</span>
+      <span data-lang="fr">Comment ça marche</span>
+    </h2>
+    <div class="space-y-4">
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">01</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Sync bancario automático</span>
+            <span data-lang="fr">Sync bancaire automatique</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Conexión directa con Revolut. Transacciones se sincronizan sin intervención manual.</span>
+            <span data-lang="fr">Connexion directe avec Revolut. Les transactions se synchronisent sans intervention manuelle.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">02</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Categorización con IA</span>
+            <span data-lang="fr">Catégorisation par IA</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Cada transacción es categorizada automáticamente usando inteligencia artificial.</span>
+            <span data-lang="fr">Chaque transaction est catégorisée automatiquement en utilisant l'intelligence artificielle.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">03</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Asistente en Telegram</span>
+            <span data-lang="fr">Assistant sur Telegram</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Preguntás en lenguaje natural y el asistente responde con datos reales de tus finanzas.</span>
+            <span data-lang="fr">Vous posez des questions en langage naturel et l'assistant répond avec des données réelles de vos finances.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">04</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Dashboard con analytics</span>
+            <span data-lang="fr">Dashboard avec analytics</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Gráficos de gastos, presupuestos, tendencias y comparativas mensuales.</span>
+            <span data-lang="fr">Graphiques de dépenses, budgets, tendances et comparaisons mensuelles.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Stack técnico</span>
+      <span data-lang="fr">Stack technique</span>
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-pill">Python</span>
+      <span class="tag-pill">FastAPI</span>
+      <span class="tag-pill">Next.js</span>
+      <span class="tag-pill">Tailwind</span>
+      <span class="tag-pill">shadcn</span>
+      <span class="tag-pill">Recharts</span>
+      <span class="tag-pill">MCP</span>
+      <span class="tag-pill">Railway</span>
+      <span class="tag-pill">Docker</span>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Arquitectura</span>
+      <span data-lang="fr">Architecture</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <strong>Backend</strong> — FastAPI + SQLAlchemy + Alembic.
+        <span data-lang="es">MCP Server para herramientas de IA. Workers para sync bancario.</span>
+        <span data-lang="fr">MCP Server pour les outils IA. Workers pour la sync bancaire.</span>
+      </p>
+      <p>
+        <strong>Frontend</strong> — Next.js + Tailwind + shadcn/ui.
+        <span data-lang="es">Recharts + d3-sankey para visualización.</span>
+        <span data-lang="fr">Recharts + d3-sankey pour la visualisation.</span>
+      </p>
+      <p>
+        <strong>Infra</strong> — Docker + Railway.
+        <span data-lang="es">Telegram Bot via OpenClaw.</span>
+        <span data-lang="fr">Telegram Bot via OpenClaw.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <div class="flex items-center gap-4">
+      <a href="https://github.com/JuanSabogal10/personal-finance" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#333] transition-colors">
+        <span data-lang="es">Ver en GitHub →</span>
+        <span data-lang="fr">Voir sur GitHub →</span>
+      </a>
+    </div>
+  </section>
+</ProjectLayout>

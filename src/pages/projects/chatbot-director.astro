@@ -1,0 +1,151 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="Chatbot Director"
+  description="Un agente de IA para directores que transforma datos en decisiones directamente en WhatsApp."
+  badge="En producción"
+  badgeColor="#10b981"
+>
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">El problema</span>
+      <span data-lang="fr">Le problème</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Los directores no pueden acceder a sus datos de forma simple. Están atrapados en dashboards complejos que requieren tiempo, conocimiento técnico y conexión a plataformas.</span>
+        <span data-lang="fr">Les directeurs ne peuvent pas accéder à leurs données facilement. Ils sont piégés dans des dashboards complexes qui nécessitent du temps et des compétences techniques.</span>
+      </p>
+      <p>
+        <span data-lang="es">WhatsApp es el canal preferido en América Latina — el 98% de los smartphones lo usan. Es donde los directores viven ya.</span>
+        <span data-lang="fr">WhatsApp est le canal préféré en Amérique Latine — 98% des smartphones l'utilisent. C'est là que les directeurs vivent déjà.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Cómo funciona</span>
+      <span data-lang="fr">Comment ça marche</span>
+    </h2>
+    <div class="space-y-4">
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">01</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Pregunta en lenguaje natural</span>
+            <span data-lang="fr">Question en langage naturel</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">El director pregunta como habla con cualquier persona.</span>
+            <span data-lang="fr">Le directeur pose des questions comme il parle à n'importe qui.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">02</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">IA traduce a SQL seguro</span>
+            <span data-lang="fr">L'IA traduit en SQL sécurisé</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Gemini convierte la pregunta en una consulta SQL validada.</span>
+            <span data-lang="fr">Gemini convertit la question en une requête SQL validée.</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-4 rounded-xl border border-[#e5e5e5] bg-white reveal">
+        <span class="text-[#2563eb] font-display font-bold text-lg">03</span>
+        <div>
+          <h3 class="font-display font-semibold text-sm">
+            <span data-lang="es">Verificación de cada cifra</span>
+            <span data-lang="fr">Vérification de chaque chiffre</span>
+          </h3>
+          <p class="text-sm text-[#666] mt-1">
+            <span data-lang="es">Cada número es verificado contra los datos reales antes de enviar.</span>
+            <span data-lang="fr">Chaque numéro est vérifié par rapport aux données réelles avant envoi.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Stack técnico</span>
+      <span data-lang="fr">Stack technique</span>
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-pill">Python</span>
+      <span class="tag-pill">FastAPI</span>
+      <span class="tag-pill">Gemini</span>
+      <span class="tag-pill">MySQL</span>
+      <span class="tag-pill">Redis</span>
+      <span class="tag-pill">Docker</span>
+      <span class="tag-pill">WhatsApp API</span>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Seguridad</span>
+      <span data-lang="fr">Sécurité</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 rounded-xl border border-[#e5e5e5] bg-white">
+        <h3 class="font-display font-semibold text-sm mb-1">
+          <span data-lang="es">SQL determinista</span>
+          <span data-lang="fr">SQL déterministe</span>
+        </h3>
+        <p class="text-sm text-[#666]">
+          <span data-lang="es">Regex, no LLM. OR/UNION prohibidos. Filtro por organización.</span>
+          <span data-lang="fr">Regex, pas LLM. OR/UNION interdits. Filtre par organisation.</span>
+        </p>
+      </div>
+      <div class="p-4 rounded-xl border border-[#e5e5e5] bg-white">
+        <h3 class="font-display font-semibold text-sm mb-1">
+          <span data-lang="es">Verificación numérica</span>
+          <span data-lang="fr">Vérification numérique</span>
+        </h3>
+        <p class="text-sm text-[#666]">
+          <span data-lang="es">Cada cifra verificada contra datos reales. Fallo → rechazo.</span>
+          <span data-lang="fr">Chaque chiffre vérifié par rapport aux données réelles. Échec → rejet.</span>
+        </p>
+      </div>
+      <div class="p-4 rounded-xl border border-[#e5e5e5] bg-white">
+        <h3 class="font-display font-semibold text-sm mb-1">Webhook HMAC-SHA256</h3>
+        <p class="text-sm text-[#666]">
+          <span data-lang="es">Firma verificada con comparación a tiempo constante.</span>
+          <span data-lang="fr">Signature vérifiée avec comparaison à temps constant.</span>
+        </p>
+      </div>
+      <div class="p-4 rounded-xl border border-[#e5e5e5] bg-white">
+        <h3 class="font-display font-semibold text-sm mb-1">Admin 2FA</h3>
+        <p class="text-sm text-[#666]">
+          <span data-lang="es">Allowlist de teléfonos + clave secreta.</span>
+          <span data-lang="fr">Allowlist de téléphones + clé secrète.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <div class="flex items-center gap-4">
+      <a href="https://whole-states-beg.loca.lt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#333] transition-colors">
+        <span data-lang="es">Ver demo →</span>
+        <span data-lang="fr">Voir la démo →</span>
+      </a>
+      <a href="https://github.com/JuanSabogal10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] text-sm font-medium hover:border-[#1a1a1a] transition-colors">
+        GitHub
+      </a>
+    </div>
+  </section>
+</ProjectLayout>
