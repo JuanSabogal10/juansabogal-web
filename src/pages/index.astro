@@ -184,12 +184,45 @@ import fr from '../i18n/fr.json';
             </div>
           </div>
         </div>
+
+        <!-- Le Petit Nicolas -->
+        <div class="carousel-item">
+          <div class="project-card border border-[#e5e5e5] rounded-2xl p-6 bg-white">
+            <h3 class="font-display text-lg font-bold mb-2">
+              <span data-lang="es">{es.projects.nicolas.name}</span>
+              <span data-lang="fr">{fr.projects.nicolas.name}</span>
+            </h3>
+            <p class="text-[#666] text-[15px] leading-relaxed mb-3">
+              <span data-lang="es">{es.projects.nicolas.what}</span>
+              <span data-lang="fr">{fr.projects.nicolas.what}</span>
+            </p>
+            <p class="text-sm text-[#999] leading-relaxed mb-4">
+              <span data-lang="es">{es.projects.nicolas.why}</span>
+              <span data-lang="fr">{fr.projects.nicolas.why}</span>
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tag-pill">Hackathon</span>
+              <span class="tag-pill">Next.js</span>
+              <span class="tag-pill">Supabase</span>
+              <span class="tag-pill">Claude</span>
+              <span class="tag-pill">Telegram</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-[#f0f0f0]">
+              <span class="text-xs text-[#999]">Hackathon</span>
+              <a href="/projects/le-petit-nicolas" class="text-xs font-medium text-[#2563eb] hover:underline">
+                <span data-lang="es">{es.projects.nicolas.demo} →</span>
+                <span data-lang="fr">{fr.projects.nicolas.demo} →</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="flex items-center justify-center gap-2 mt-6">
         <div class="carousel-dot active" data-index="0"></div>
         <div class="carousel-dot" data-index="1"></div>
         <div class="carousel-dot" data-index="2"></div>
+        <div class="carousel-dot" data-index="3"></div>
       </div>
     </section>
 

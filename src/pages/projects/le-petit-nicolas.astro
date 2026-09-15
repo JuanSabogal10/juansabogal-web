@@ -1,0 +1,58 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="Le Petit Nicolas"
+  descriptionEs="Un asistente de IA para educación K-12, construido en un hackathon."
+  descriptionFr="Un assistant IA pour l'éducation K-12, construit lors d'un hackathon."
+  badge="Hackathon"
+  badgeColor="#f59e0b"
+  seoDescription="Le Petit Nicolas — asistente de IA para educación K-12 construido en un hackathon. Next.js, Supabase, Auth0, Claude, Telegram."
+>
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">El problema</span>
+      <span data-lang="fr">Le problème</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Los docentes necesitan dar seguimiento al aprendizaje de cada estudiante, pero no tienen tiempo para revisar tarea por tarea ni herramientas simples para hacerlo.</span>
+        <span data-lang="fr">Les enseignants doivent suivre l'apprentissage de chaque élève, mais n'ont ni le temps de tout revoir en détail ni d'outils simples pour le faire.</span>
+      </p>
+      <p>
+        <span data-lang="es">Le Petit Nicolas combina un agente de IA que acompaña a los estudiantes (por chat y Telegram) con una consola web para que los docentes vean el progreso real.</span>
+        <span data-lang="fr">Le Petit Nicolas combine un agent IA qui accompagne les élèves (par chat et Telegram) avec une console web pour que les enseignants voient la progression réelle.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Stack técnico</span>
+      <span data-lang="fr">Stack technique</span>
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-pill">Next.js</span>
+      <span class="tag-pill">Supabase</span>
+      <span class="tag-pill">Auth0</span>
+      <span class="tag-pill">Claude</span>
+      <span class="tag-pill">Telegram</span>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <div class="flex items-center gap-4">
+      <a href="https://www.youtube.com/watch?v=D9N-cXE_P-8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#333] transition-colors">
+        <span data-lang="es">Ver demo →</span>
+        <span data-lang="fr">Voir la démo →</span>
+      </a>
+      <a href="https://github.com/alaaeddine-ahriz/le-petit-nicolas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] text-sm font-medium hover:border-[#1a1a1a] transition-colors">
+        GitHub
+      </a>
+    </div>
+  </section>
+</ProjectLayout>

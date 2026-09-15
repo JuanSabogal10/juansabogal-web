@@ -37,6 +37,13 @@
       "why": "Necesitaba una herramienta propia para trackear gastos, presupuestos y metas financieras. Conecta directo con mi banco (Revolut) y tiene un asistente de IA que responde preguntas sobre mis finanzas.",
       "stack": "Python · FastAPI · Next.js · Tailwind · Recharts · Railway",
       "demo": "Ver presentación"
+    },
+    "nicolas": {
+      "name": "Le Petit Nicolas",
+      "what": "Asistente de IA para educación K-12 — un agente que acompaña a estudiantes y una consola para docentes.",
+      "why": "Construido en un hackathon. Combina un agente con IA de Claude, integración con Telegram y una consola web para que los docentes den seguimiento al aprendizaje.",
+      "stack": "Next.js · Supabase · Auth0 · Claude · Telegram",
+      "demo": "Ver demo"
     }
   },
   "writings": {
