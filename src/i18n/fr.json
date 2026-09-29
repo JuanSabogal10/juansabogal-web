@@ -44,6 +44,13 @@
       "why": "Construit lors d'un hackathon. Combine un agent propulsé par Claude, une intégration Telegram et une console web pour que les enseignants suivent l'apprentissage.",
       "stack": "Next.js · Supabase · Auth0 · Claude · Telegram",
       "demo": "Voir la démo"
+    },
+    "promptlab": {
+      "name": "Promptlab",
+      "what": "Évalue des prompts avec des scénarios générés et compare les réponses complètes selon des critères et des pondérations configurables.",
+      "why": "L'inférence s'exécute localement dans le navigateur avec WebLLM et WebGPU.",
+      "stack": "Astro · Vite · WebLLM · WebGPU",
+      "demo": "Voir le projet"
     }
   },
   "writings": {

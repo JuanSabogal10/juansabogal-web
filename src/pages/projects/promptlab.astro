@@ -1,0 +1,75 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+  title="Promptlab"
+  descriptionEs="Evalúa prompts con escenarios generados, respuestas completas y una rúbrica de criterios configurables."
+  descriptionFr="Évaluez des prompts avec des scénarios générés, des réponses complètes et une grille de critères configurables."
+  badge="En producción"
+  badgeColor="#2563eb"
+  seoDescription="Promptlab — evaluación de prompts en el navegador con escenarios, respuestas completas y criterios configurables. WebLLM y WebGPU."
+>
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Qué hace</span>
+      <span data-lang="fr">Fonctionnalités</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Promptlab permite probar un prompt con un conjunto de escenarios y revisar la respuesta completa de cada uno. Puedes elegir criterios de evaluación, ajustar sus pesos y añadir criterios propios.</span>
+        <span data-lang="fr">Promptlab permet de tester un prompt sur un ensemble de scénarios et d'examiner la réponse complète de chacun. Vous pouvez choisir les critères d'évaluation, ajuster leur pondération et ajouter vos propres critères.</span>
+      </p>
+      <p>
+        <span data-lang="es">Cada escenario muestra una calificación, el desglose por criterio, una explicación y evidencias de la evaluación.</span>
+        <span data-lang="fr">Chaque scénario affiche une note, le détail par critère, une explication et les éléments justificatifs de l'évaluation.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Evaluación local</span>
+      <span data-lang="fr">Évaluation locale</span>
+    </h2>
+    <div class="space-y-4 text-[17px] leading-[1.8] text-[#444]">
+      <p>
+        <span data-lang="es">Los modelos se ejecutan en el navegador mediante WebLLM y WebGPU. El prompt y las respuestas se procesan en el dispositivo y no se envían al servidor de Promptlab ni a una API de inferencia en la nube.</span>
+        <span data-lang="fr">Les modèles s'exécutent dans le navigateur avec WebLLM et WebGPU. Le prompt et les réponses sont traités sur l'appareil et ne sont envoyés ni au serveur de Promptlab ni à une API d'inférence cloud.</span>
+      </p>
+      <p>
+        <span data-lang="es">La primera carga descarga los archivos del modelo en el navegador y puede requerir bastante espacio y memoria GPU. Se necesita un navegador y un dispositivo compatibles con WebGPU.</span>
+        <span data-lang="fr">Le premier chargement télécharge les fichiers du modèle dans le navigateur et peut demander beaucoup d'espace et de mémoire GPU. Un navigateur et un appareil compatibles avec WebGPU sont nécessaires.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <h2 class="font-display text-xl font-bold mb-6">
+      <span data-lang="es">Stack técnico</span>
+      <span data-lang="fr">Stack technique</span>
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="tag-pill">Astro</span>
+      <span class="tag-pill">Vite</span>
+      <span class="tag-pill">WebLLM</span>
+      <span class="tag-pill">WebGPU</span>
+    </div>
+  </section>
+
+  <section class="py-10 reveal">
+    <div class="section-divider mb-10"></div>
+    <div class="flex flex-wrap items-center gap-3">
+      <a href="https://promptlab-flame.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#333] transition-colors">
+        <span data-lang="es">Abrir Promptlab →</span>
+        <span data-lang="fr">Ouvrir Promptlab →</span>
+      </a>
+      <a href="https://github.com/JuanSabogal10/promptlab" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] text-sm font-medium hover:border-[#1a1a1a] transition-colors">
+        GitHub
+      </a>
+    </div>
+  </section>
+</ProjectLayout>

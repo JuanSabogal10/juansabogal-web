@@ -216,13 +216,48 @@ import fr from '../i18n/fr.json';
             </div>
           </div>
         </div>
+
+        <!-- Promptlab -->
+        <div class="carousel-item">
+          <div class="project-card border border-[#e5e5e5] rounded-2xl p-6 bg-white">
+            <h3 class="font-display text-lg font-bold mb-2">
+              <span data-lang="es">{es.projects.promptlab.name}</span>
+              <span data-lang="fr">{fr.projects.promptlab.name}</span>
+            </h3>
+            <p class="text-[#666] text-[15px] leading-relaxed mb-3">
+              <span data-lang="es">{es.projects.promptlab.what}</span>
+              <span data-lang="fr">{fr.projects.promptlab.what}</span>
+            </p>
+            <p class="text-sm text-[#999] leading-relaxed mb-4">
+              <span data-lang="es">{es.projects.promptlab.why}</span>
+              <span data-lang="fr">{fr.projects.promptlab.why}</span>
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tag-pill">Astro</span>
+              <span class="tag-pill">Vite</span>
+              <span class="tag-pill">WebLLM</span>
+              <span class="tag-pill">WebGPU</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-[#f0f0f0]">
+              <span class="text-xs text-[#999]">
+                <span data-lang="es">En producción</span>
+                <span data-lang="fr">En production</span>
+              </span>
+              <a href="/projects/promptlab" class="text-xs font-medium text-[#2563eb] hover:underline">
+                <span data-lang="es">{es.projects.promptlab.demo} →</span>
+                <span data-lang="fr">{fr.projects.promptlab.demo} →</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="flex items-center justify-center gap-2 mt-6">
-        <div class="carousel-dot active" data-index="0"></div>
-        <div class="carousel-dot" data-index="1"></div>
-        <div class="carousel-dot" data-index="2"></div>
-        <div class="carousel-dot" data-index="3"></div>
+      <div class="flex items-center justify-center gap-2 mt-6" id="project-carousel-navigation" role="group" aria-label="Navegación de proyectos" data-label-es="Navegación de proyectos" data-label-fr="Navigation des projets">
+        <button type="button" class="carousel-dot active" data-index="0" data-label-es="Mostrar proyecto 1 de 5" data-label-fr="Afficher le projet 1 sur 5" aria-label="Mostrar proyecto 1 de 5" aria-current="true" aria-controls="projects-carousel" style="appearance:none;border:0;padding:0"></button>
+        <button type="button" class="carousel-dot" data-index="1" data-label-es="Mostrar proyecto 2 de 5" data-label-fr="Afficher le projet 2 sur 5" aria-label="Mostrar proyecto 2 de 5" aria-controls="projects-carousel" style="appearance:none;border:0;padding:0"></button>
+        <button type="button" class="carousel-dot" data-index="2" data-label-es="Mostrar proyecto 3 de 5" data-label-fr="Afficher le projet 3 sur 5" aria-label="Mostrar proyecto 3 de 5" aria-controls="projects-carousel" style="appearance:none;border:0;padding:0"></button>
+        <button type="button" class="carousel-dot" data-index="3" data-label-es="Mostrar proyecto 4 de 5" data-label-fr="Afficher le projet 4 sur 5" aria-label="Mostrar proyecto 4 de 5" aria-controls="projects-carousel" style="appearance:none;border:0;padding:0"></button>
+        <button type="button" class="carousel-dot" data-index="4" data-label-es="Mostrar proyecto 5 de 5" data-label-fr="Afficher le projet 5 sur 5" aria-label="Mostrar proyecto 5 de 5" aria-controls="projects-carousel" style="appearance:none;border:0;padding:0"></button>
       </div>
     </section>
 
@@ -354,6 +389,13 @@ import fr from '../i18n/fr.json';
       document.body.classList.toggle('lang-fr', lang === 'fr');
       document.documentElement.lang = lang;
       localStorage.setItem('lang', lang);
+      const navigation = document.getElementById('project-carousel-navigation');
+      const navigationLabel = navigation?.getAttribute(lang === 'fr' ? 'data-label-fr' : 'data-label-es');
+      if (navigation && navigationLabel) navigation.setAttribute('aria-label', navigationLabel);
+      document.querySelectorAll('.carousel-dot').forEach((dot) => {
+        const label = dot.getAttribute(lang === 'fr' ? 'data-label-fr' : 'data-label-es');
+        if (label) dot.setAttribute('aria-label', label);
+      });
     }
 
     applyLang(currentLang);
@@ -374,6 +416,8 @@ import fr from '../i18n/fr.json';
       const index = Math.round(scrollLeft / (cardWidth + 24));
       dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
+        if (i === index) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
       });
     });
 
