@@ -49,7 +49,7 @@
       "name": "Promptlab",
       "what": "Evalúa prompts con escenarios generados y compara las respuestas completas según criterios y pesos configurables.",
       "why": "La inferencia se ejecuta localmente en el navegador con WebLLM y WebGPU.",
-      "stack": "Astro · Vite · WebLLM · WebGPU",
+      "stack": "Vite · WebLLM · WebGPU",
       "demo": "Ver proyecto"
     }
   },
