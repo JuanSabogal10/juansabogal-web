@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancii — Director WhatsApp AI Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <button class="lang-toggle" id="langToggle">
+        <span class="lang-active">FR</span>
+        <span class="lang-divider">|</span>
+        <span>ES</span>
+    </button>
+
+    <!-- Navigation Dots -->
+    <nav class="nav-dots" id="navDots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+        <button class="dot" data-slide="3"></button>
+        <button class="dot" data-slide="4"></button>
+        <button class="dot" data-slide="5"></button>
+        <button class="dot" data-slide="6"></button>
+        <button class="dot" data-slide="7"></button>
+    </nav>
+
+    <!-- Slides Container -->
+    <div class="slides-container" id="slidesContainer">
+
+        <!-- Slide 0: Cover -->
+        <section class="slide slide-cover" data-slide="0">
+            <div class="slide-content">
+                <div class="cover-badge">
+                    <span class="badge-dot"></span>
+                    <span data-fr="Agent IA en production" data-es="Agente IA en producción">Agent IA en production</span>
+                </div>
+                <h1 class="cover-title">
+                    <span class="cover-highlight" data-fr="WhatsApp" data-es="WhatsApp">WhatsApp</span>
+                    <br>
+                    <span data-fr="pour Directeurs" data-es="para Directores">pour Directeurs</span>
+                </h1>
+                <p class="cover-subtitle" data-fr="Un assistant stratégique qui transforme les données en décisions — directement dans WhatsApp." data-es="Un asistente estratégico que transforma datos en decisiones — directamente en WhatsApp.">Un assistant stratégique qui transforme les données en décisions — directement dans WhatsApp.</p>
+                <div class="cover-meta">
+                    <span>Mancii</span>
+                    <span class="meta-divider">—</span>
+                    <span data-fr="EdTech • LATAM" data-es="EdTech • LATAM">EdTech • LATAM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 1: Problem -->
+        <section class="slide slide-problem" data-slide="1">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Le problème" data-es="El problema">Le problème</span>
+                <h2 class="slide-title" data-fr="Les directeurs ne peuvent pas accéder à leurs données." data-es="Los directores no pueden acceder a sus datos.">Les directeurs ne peuvent pas accéder à leurs données.</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <span class="problem-number">01</span>
+                        <p data-fr="Avant une réunion de conseil, un directeur doit naviguer dans des tableaux de bord complexes, appliquer les bons filtres, et interpréter les résultats manuellement." data-es="Antes de una junta de consejo, un director debe navegar dashboards complejos, aplicar los filtros correctos, e interpretar los resultados manualmente.">Avant une réunion de conseil, un directeur doit naviguer dans des tableaux de bord complexes, appliquer les bons filtres, et interpréter les résultats manuellement.</p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-number">02</span>
+                        <p data-fr="Les données sont piégées dans le SaaS. Le directeur a besoin d'un accès simple, immédiat, sans connexion supplémentaire." data-es="Los datos están atrapados en el SaaS. El director necesita acceso simple, inmediato, sin login adicional.">Les données sont piégées dans le SaaS. Le directeur a besoin d'un accès simple, immédiat, sans connexion supplémentaire.</p>
+                    </div>
+                    <div class="problem-card">
+                        <span class="problem-number">03</span>
+                        <p data-fr="WhatsApp est le canal privilégié en Amérique Latine. 98% des smartphones l'utilisent. C'est là que les directeurs vivent déjà." data-es="WhatsApp es el canal preferido en LATAM. 98% de los smartphones lo usan. Ahí es donde los directores ya están.">WhatsApp est le canal privilégié en Amérique Latine. 98% des smartphones l'utilisent. C'est là que les directeurs vivent déjà.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Solution -->
+        <section class="slide slide-solution" data-slide="2">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="La solution" data-es="La solución">La solution</span>
+                <h2 class="slide-title" data-fr="Un directeur stratégique dans votre WhatsApp." data-es="Un director estratégico en tu WhatsApp.">Un directeur stratégique dans votre WhatsApp.</h2>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="flow-icon">💬</div>
+                        <p data-fr="Le directeur pose une question en langage naturel" data-es="El director hace una pregunta en lenguaje natural">Le directeur pose une question en langage naturel</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-icon">🧠</div>
+                        <p data-fr="L'IA traduit en SQL sécurisé et exécute contre les données réelles" data-es="La IA traduce a SQL seguro y ejecuta contra datos reales">L'IA traduit en SQL sécurisé et exécute contre les données réelles</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-icon">✓</div>
+                        <p data-fr="Chaque chiffre est vérifié avant d'être envoyé" data-es="Cada número se verifica antes de ser enviado">Chaque chiffre est vérifié avant d'être envoyé</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Tech Stack -->
+        <section class="slide slide-stack" data-slide="3">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Stack technique" data-es="Stack técnico">Stack technique</span>
+                <h2 class="slide-title" data-fr="Technologies utilisées" data-es="Tecnologías utilizadas">Technologies utilisées</h2>
+                <div class="stack-grid">
+                    <div class="stack-item">
+                        <span class="stack-name">Python 3.12</span>
+                        <span class="stack-role" data-fr="Langage principal" data-es="Lenguaje principal">Langage principal</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">FastAPI</span>
+                        <span class="stack-role" data-fr="Framework API" data-es="Framework API">Framework API</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">Google Gemini</span>
+                        <span class="stack-role" data-fr="LLM + Embeddings" data-es="LLM + Embeddings">LLM + Embeddings</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">MySQL</span>
+                        <span class="stack-role" data-fr="Données (lecture seule)" data-es="Datos (solo lectura)">Données (lecture seule)</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">Redis</span>
+                        <span class="stack-role" data-fr="Cache + Rate limiting" data-es="Cache + Rate limiting">Cache + Rate limiting</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">SQLite</span>
+                        <span class="stack-role" data-fr="Mémoire persistante" data-es="Memoria persistente">Mémoire persistante</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">Docker</span>
+                        <span class="stack-role" data-fr="Containerisation" data-es="Containerización">Containerisation</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-name">WhatsApp API</span>
+                        <span class="stack-role" data-fr="Canal de messagerie" data-es="Canal de mensajería">Canal de messagerie</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: User Pathway -->
+        <section class="slide slide-pathway" data-slide="4">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Parcours utilisateur" data-es="Recorrido del usuario">Parcours utilisateur</span>
+                <h2 class="slide-title" data-fr="De la première question à la décision." data-es="De la primera pregunta a la decisión.">De la première question à la décision.</h2>
+                <div class="pathway-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step" data-fr="Étape 1" data-es="Paso 1">Étape 1</span>
+                            <h3 data-fr="Onboarding guidé" data-es="Onboarding guiado">Onboarding guidé</h3>
+                            <p data-fr="4 étapes conversationnelles : identité, profil, personnalité, organisation." data-es="4 pasos conversacionales: identidad, perfil, personalidad, organización.">4 étapes conversationnelles : identité, profil, personnalité, organisation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step" data-fr="Étape 2" data-es="Paso 2">Étape 2</span>
+                            <h3 data-fr="Classification d'intention" data-es="Clasificación de intención">Classification d'intention</h3>
+                            <p data-fr="L'IA détecte si c'est une question de données ou de stratégie." data-es="La IA detecta si es una pregunta de datos o de estrategia.">L'IA détecte si c'est une question de données ou de stratégie.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step" data-fr="Étape 3" data-es="Paso 3">Étape 3</span>
+                            <h3 data-fr="Exécution vérifiée" data-es="Ejecución verificada">Exécution vérifiée</h3>
+                            <p data-fr="NL → SQL → Données → Vérification déterministe de chaque chiffre." data-es="NL → SQL → Datos → Verificación determinista de cada número.">NL → SQL → Données → Vérification déterministe de chaque chiffre.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-step" data-fr="Étape 4" data-es="Paso 4">Étape 4</span>
+                            <h3 data-fr="Mémoire persistante" data-es="Memoria persistente">Mémoire persistante</h3>
+                            <p data-fr="L'agent se souvient du directeur, de ses décisions, et de ses données confidentielles." data-es="El agente recuerda al director, sus decisiones, y sus datos confidenciales.">L'agent se souvient du directeur, de ses décisions, et de ses données confidentielles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Features -->
+        <section class="slide slide-features" data-slide="5">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Fonctionnalités" data-es="Funcionalidades">Fonctionnalités</span>
+                <h2 class="slide-title" data-fr="4 features, 1 objectif : faciliter la décision." data-es="4 features, 1 objetivo: facilitar la decisión.">4 features, 1 objectif : faciliter la décision.</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3 data-fr="Agent Métriques" data-es="Agente de Métricas">Agent Métriques</h3>
+                        <p data-fr="Questions en langage naturel → SQL sécurisé → Réponse vérifiée dans WhatsApp." data-es="Preguntas en lenguaje natural → SQL seguro → Respuesta verificada en WhatsApp.">Questions en langage naturel → SQL sécurisé → Réponse vérifiée dans WhatsApp.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🧠</span>
+                        <h3 data-fr="Agent Stratégique" data-es="Agente Estratégico">Agent Stratégique</h3>
+                        <p data-fr="Mémoire persistante, données confidentielles, recommandations personnalisées." data-es="Memoria persistente, datos confidenciales, recomendaciones personalizadas.">Mémoire persistante, données confidentielles, recommandations personnalisées.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔐</span>
+                        <h3 data-fr="Mode Admin" data-es="Modo Admin">Mode Admin</h3>
+                        <p data-fr="2FA, gestion des directeurs, requêtes cross-organisation, audit log." data-es="2FA, gestión de directores, queries cross-organización, audit log.">2FA, gestion des directeurs, requêtes cross-organisation, audit log.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📈</span>
+                        <h3 data-fr="Analytics" data-es="Analytics">Analytics</h3>
+                        <p data-fr="Volume de messages, directeurs actifs, suivi des sujets les plus fréquents." data-es="Volumen de mensajes, directores activos, seguimiento de temas frecuentes.">Volume de messages, directeurs actifs, suivi des sujets les plus fréquents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Security -->
+        <section class="slide slide-security" data-slide="6">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Sécurité" data-es="Seguridad">Sécurité</span>
+                <h2 class="slide-title" data-fr="Sécurité par conception, pas par ajout." data-es="Seguridad por diseño, no por añadido.">Sécurité par conception, pas par ajout.</h2>
+                <div class="security-list">
+                    <div class="security-item">
+                        <span class="security-check">✓</span>
+                        <div>
+                            <strong data-fr="Validation SQL déterministe" data-es="Validación SQL determinista">Validation SQL déterministe</strong>
+                            <p data-fr="Regex, pas LLM. OR/UNION interdits. Filtre obligatoire par organisation." data-es="Regex, no LLM. OR/UNION prohibidos. Filtro obligatorio por organización.">Regex, pas LLM. OR/UNION interdits. Filtre obligatoire par organisation.</p>
+                        </div>
+                    </div>
+                    <div class="security-item">
+                        <span class="security-check">✓</span>
+                        <div>
+                            <strong data-fr="Vérification numérique" data-es="Verificación numérica">Vérification numérique</strong>
+                            <p data-fr="Chaque chiffre dans la réponse est vérifié contre les données réelles. Échec → rejet." data-es="Cada número en la respuesta se verifica contra datos reales. Fallo → rechazo.">Chaque chiffre dans la réponse est vérifié contre les données réelles. Échec → rejet.</p>
+                        </div>
+                    </div>
+                    <div class="security-item">
+                        <span class="security-check">✓</span>
+                        <div>
+                            <strong data-fr="Webhook HMAC-SHA256" data-es="Webhook HMAC-SHA256">Webhook HMAC-SHA256</strong>
+                            <p data-fr="Signature vérifiée avec comparaison à temps constant. Pas de timing attacks." data-es="Firma verificada con comparación de tiempo constante. Sin timing attacks.">Signature vérifiée avec comparaison à temps constant. Pas de timing attacks.</p>
+                        </div>
+                    </div>
+                    <div class="security-item">
+                        <span class="security-check">✓</span>
+                        <div>
+                            <strong data-fr="Admin 2FA" data-es="Admin 2FA">Admin 2FA</strong>
+                            <p data-fr="Allowlist de téléphones + clé secrète. Les deux facteurs requis." data-es="Allowlist de teléfonos + clave secreta. Ambos factores requeridos.">Allowlist de téléphones + clé secrète. Les deux facteurs requis.</p>
+                        </div>
+                    </div>
+                    <div class="security-item">
+                        <span class="security-check">✓</span>
+                        <div>
+                            <strong data-fr="Isolation des données confidentielles" data-es="Aislamiento de datos confidenciales">Isolation des données confidentielles</strong>
+                            <p data-fr="SQLite séparé, jamais versionné. CPL, CAC, ROAS isolés par directeur + organisation." data-es="SQLite separado, nunca versionado. CPL, CAC, ROAS aislados por director + organización.">SQLite séparé, jamais versionné. CPL, CAC, ROAS isolés par directeur + organisation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Chat Demo -->
+        <section class="slide slide-chat" data-slide="7">
+            <div class="slide-content">
+                <span class="slide-label" data-fr="Démo interactive" data-es="Demo interactiva">Démo interactive</span>
+                <h2 class="slide-title" data-fr="3 modes, 1 assistant." data-es="3 modos, 1 asistente.">3 modes, 1 assistant.</h2>
+
+                <!-- Conversation Tabs -->
+                <div class="chat-tabs">
+                    <button class="chat-tab active" data-chat="metrics">
+                        <span class="tab-icon">📊</span>
+                        <span data-fr="Métriques" data-es="Métricas">Métriques</span>
+                    </button>
+                    <button class="chat-tab" data-chat="strategy">
+                        <span class="tab-icon">🧠</span>
+                        <span data-fr="Stratégie" data-es="Estrategia">Stratégie</span>
+                    </button>
+                    <button class="chat-tab" data-chat="admin">
+                        <span class="tab-icon">🔐</span>
+                        <span>Admin</span>
+                    </button>
+                </div>
+
+                <!-- Phone Mockup -->
+                <div class="phone-mockup">
+                    <div class="phone-header">
+                        <div class="phone-avatar">🤖</div>
+                        <div class="phone-info">
+                            <span class="phone-name">Mancii Bot</span>
+                            <span class="phone-status" data-fr="en ligne" data-es="en línea">en ligne</span>
+                        </div>
+                    </div>
+
+                    <div class="phone-chat" id="phoneChat">
+                        <!-- Messages will be injected by JS -->
+                    </div>
+
+                    <div class="phone-input">
+                        <span class="phone-placeholder" data-fr="Tapez un message..." data-es="Escribe un mensaje...">Tapez un message...</span>
+                        <div class="phone-send">▶</div>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="chat-process" id="chatProcess">
+                    <div class="process-step" data-step="classify">
+                        <span class="process-icon">🔍</span>
+                        <span data-fr="Classification d'intention" data-es="Clasificación de intención">Classification d'intention</span>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step" data-step="execute">
+                        <span class="process-icon">⚙️</span>
+                        <span data-fr="Exécution" data-es="Ejecución">Exécution</span>
+                    </div>
+                    <div class="process-arrow">→</div>
+                    <div class="process-step" data-step="verify">
+                        <span class="process-icon">✓</span>
+                        <span data-fr="Vérification" data-es="Verificación">Vérification</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Keyboard hint -->
+    <div class="keyboard-hint" id="keyboardHint">
+        <span data-fr="Utilisez les flèches ← → pour naviguer" data-es="Usa las flechas ← → para navegar">Utilisez les flèches ← → pour naviguer</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
